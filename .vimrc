@@ -9,3 +9,6 @@ let &colorcolumn=join(range(80,999),",")
 
 " Set <F8> key to toggle between light and dark backgrounds
 map <F8> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+
+" Enable <F5> hotkey to run python code when FileType = python
+autocmd FileType python nnoremap <buffer> <F5> :exec '!python' shellescape(@%, 1)<CR>
