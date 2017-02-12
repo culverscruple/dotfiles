@@ -114,3 +114,10 @@ fi
 if [ -n "$DISPLAY" ]; then
   xset b off
 fi
+
+# commit and push dotfiles to github in one go
+function dotpush() {
+    cd ~/git/dotfiles
+    git commit . -m "$1"
+    git push
+}
