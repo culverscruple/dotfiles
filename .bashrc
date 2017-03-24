@@ -90,6 +90,9 @@ fi
 #alias l='ls -CF'
 alias install='sudo apt-get install'
 alias remove='sudo apt-get remove'
+alias grive='cd ~/keepass && grive -su keepass'
+alias higan='MESA_GL_VERSION_OVERRIDE=3.2 MESA_GLSL_VERSION_OVERRIDE=150 higan'
+alias policy='apt-cache policy'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -121,3 +124,6 @@ function dotpush() {
     git commit . -m "$1"
     git push origin master
 }
+
+# Tell TCL's library loader where to find 'clearlooks' theme
+export TCLLIBPATH=~/.local/share/tkthemes
